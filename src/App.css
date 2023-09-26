@@ -12,6 +12,14 @@ body {
     /* 2.475rem */
 }
 
+.gray{
+    color: #918E9B;
+}
+
+.bold{
+    font-weight: bold;
+}
+
 .hero-header {
     font-weight: 600;
     margin-bottom: 1rem;
@@ -49,4 +57,19 @@ nav {
 
 .hero-photo {
     align-self: center;
+}
+
+.card{
+    width: 175px;
+    font-size: 0.85rem;
+}
+
+.card-img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card-stats {
+    display: flex;
+    align-items: center;
 }
