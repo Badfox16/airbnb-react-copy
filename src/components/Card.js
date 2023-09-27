@@ -1,24 +1,21 @@
 import React from 'react';
-import star from './img/star.svg';
-import katie from './img/katie.png';
 
-export default function Card() {
+export default function Card(props) {
     return (
         <div className='card-container'>
             <div className='card'>
-                {/* <span>SOLD OUT</span> */}
-                <img src={katie} className='card-img' alt='Card'></img>
+                <img src={`./img/${props.img}`} className='card-img' alt='Card'></img>
                 <div>
                     <div className='card-stats'>
-                    <img src={star} className='card-star' alt='Star Card'></img>
-                        <span>5.0</span> 
-                        <span className='gray'>(6) <strong>.</strong></span> 
-                        <span className='gray'>USA</span>
+                    <img src={`./img/${props.star}`} className='card-star' alt='Star Card'></img>
+                        <span>  {props.rating} </span> 
+                        <span className='gray'> ({props.reviewCount})<strong>.</strong></span> 
+                        <span className='gray'>{props.country}</span>
                     </div>
                 </div>
                 <div>
-                    <p>Life lessons with Katie Zaferes</p>
-                    <p><span className='bold'>From $136</span> / person</p>
+                    <p>{props.title}</p>
+                    <p><span className='bold'>From ${props.price}</span> / person</p>
                 </div>
             </div>
         </div>

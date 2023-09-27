@@ -1,35 +1,26 @@
 import './App.css';
-// import Card from './components/Card';
-import Contact from './components/Contacts';
-// import Hero from './components/Hero';
-// import Navbar from './components/Navbar';
+import Card from './components/Card';
+import Hero from './components/Hero';
+import Navbar from './components/Navbar';
+import Data from './components/Data';
 
 function App() {
-  const firstName= "Mutizo";
-
-  const date = new Date();
-  const hours = date.getHours();
-  let time;
-
-  if (hours<12) {
-    time="dia"
-  } else if (hours >= 12 && hours <17) {
-    time="tarde"
-  } else{
-    time="noite"
-  }
-
+  const cardElement = Data.map(dados => {
+    return <Card 
+    img={dados.img}
+    star={dados.star}
+    rating={dados.stats.rating}
+    reviewCount={dados.stats.reviewCount}
+    country={dados.country}
+    title={dados.title}
+    price={dados.price}
+  />
+  }) 
   return (
     <div className="container">
-        {/* <Navbar/>
+        <Navbar/>
         <Hero/>
-        <Card/> */}
-        <h1>Boa {time}, {firstName}!</h1>
-        <Contact
-         name="Mr. Whiskerson"
-         nr="(212) 555-1234"
-         email="mr.whiskaz@catnap.moew"
-        /> 
+        {cardElement}
     </div>
   );
 }

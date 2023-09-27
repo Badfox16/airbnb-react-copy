@@ -1,19 +1,19 @@
 import React from "react";
 
-export default function Contact() {
+export default function Contact(props) {
     return(
         <div className="contacts">
 
             <div className="contact-card">
                 <img src="" alt="Kitten"></img>
-                <h3>Mr. Whiskerson</h3>
+                <h3>{props.nome}</h3>
                 <div>
                     <img src="" alt="icon"></img>
-                    <p>(212) 555-1234 </p>
+                    <p>{props.nr}</p>
                 </div>
                 <div>
                     <img src="" alt="icon"></img>
-                    <p>mr.whiskaz@catnap.moew</p>
+                    <p>{props.email}</p>
                 </div>
             </div>
 
